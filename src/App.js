@@ -1,21 +1,27 @@
-
-
+import React from 'react';
+import Cards from './card';
+import Data from './data';
 import Navigation from './nav';
-import Heading from './headings'
-import Plans from './healthPlan'
-import Testimony from './testimony';
-import Footer from './footer';
+import Hero from './hero'
+
 
 function App() {
+ let newData = Data.map(item =>{
+   return(
+     <Cards 
+     key= {item.name}
+     {...item}/>
+   )
+ })
   return (
    <>
     <Navigation />
-    <Heading />
-    <Plans />
-    <Testimony />
-    <Footer />
-   </>
-  );
+    <Hero />
+    <div className='card_div'>
+      {newData}
+    </div>
+  </>
+  )
 }
 
 export default App;

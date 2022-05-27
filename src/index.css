@@ -1,267 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700;900&family=Poppins:wght@100;200;300;400;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap');
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
-}
-:root{
-  --intro-color: #da93c4
-}
-/**Styling the Navigation*/
-.nav_div, .navigation, .nav_bar, .nav_ul,.list_item{
-  display: flex;
-  align-items: center;
+    padding: 0;
+    margin: 0;
+    font-family: 'lato', sans-serif;
 }
 .navigation{
-  width: 100%;
-  filter: drop-shadow(0 1px 5px rgb(218, 218, 218)); 
-  background-color: #ffffff81;
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  transition: .3s ease-in-out;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 1px 5px rgba(128, 128, 128, 0.29));
 }
-body{
-  transition: .3s ease-in-out;
+.nav{
+    width: 90%;
+    margin: 0 auto;
+
+}
+.main_hero{
+    width: 100%;
+    margin-top: 20px;
+}
+.hero_text{
+    width: 90%;
+    text-align: center;
+    margin: 30px auto;
+}
+.hero_text > h3{
+    font-size: 33px;
+    color: rgba(231, 15, 55, 0.827);
 }
 
-
-.nav_bar{
-  justify-content: space-between;
-  width: 75%;
-  margin: 0 auto;
+.card_div{
+    display: flex;
+    overflow-x: auto;
 }
-.nav_ul{
-  list-style: none;
+.card_div::-webkit-scrollbar{
+    width: 0;
 }
-.list_item, .login{
-  padding: 25px 5px;
-  cursor: pointer;
-  margin: 0 10px;
-  font-size: .9rem;
-  color: #094063;
-  transition: .3s ease-in-out;
-  position: relative;
+.card{
+    margin: 0 20px;
+    position: relative;
+    padding: 20px 0;
 }
-.dropdown{
-  background-color: #ffffffa6;
-  backdrop-filter: blur(10px);
-  position: absolute;
-  list-style: none;
-  display: none;
-  left: 0;
-  top: 60px;
-  width: 250px;
-  padding: 20px 30px;
-  border: 1px solid #094063;
-  border-radius: 5px;
-  transition: 1s ease-in-out;
-  color: #094063;
-  z-index: 3;
-  cursor: default;
+.card:hover .product_img{
+    transform: scale(1.05);  
 }
-.dropdown > li{
-  font-size: .8rem;
-  line-height: 25px;
-  cursor: pointer;
+.badge{
+    position: absolute;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 3px;
+    font-weight: bolder;
+    font-size: 12px;
+    margin: 10px;
+    z-index: 1;
 }
-.dropdown > li:hover{
-  color: #009dff;
+.product_img{
+    width: 350px;
+    height: 250px;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    margin-bottom: 10px;  
 }
-.list_item:hover, .login:hover{
-  color: #009dff;
+.card > span{
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
-.list_item:hover .dropdown{
-  display: block;
-  top: 70px;
+.product_name{
+    margin-right: 10px;
 }
-.get_started{
-  padding: 10px 15px;
-  margin: 0 15px;
-  cursor: pointer;
-  font-size: .9rem;
-  border-radius: 5px;
-  background-color: #094063;
-  color: #ffffff;
+.product_price{
+    font-weight: bolder;
+    margin-right: 10px;
 }
-.bxs-moon{
-  font-size: 1.3rem;
-  cursor: pointer;
-  padding: 10px;
-  color: #ffffff;
-  border-radius: 50%;
-  background-color: #094063;
-}
-
-/**Styling the intro text section**/
-
-.head_content{
-  width: 65%;
-  margin: 50px auto;
-}
-.head_intro{
-  color: #0076c0;
-  font-size: 2.7rem;
-  width: 100%;
-  max-width: 600px;
-}
-.head_text{
-  width: 100%;
-  max-width: 350px;
-  margin-bottom: 30px ;
-  opacity: .8;
-}
-.get_health{
-  padding: 10px 15px;
-  margin-top: 50px;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #094063;
-  color: #ffffff;
-}
-.family{
-  display: block;
-  margin: 20px;
-  border-radius: 20px;
-}
-
-
-
-/**Health Plan***/
-.health_plan_main{
-  width: 65%;
-  margin: 0 auto;
-}
-.health_plan_main > p{
-  text-align: center;
-  margin: 20px 0 ;
-  font-size: 2.1rem;
-  font-weight: 600;
-  color: #094063;
-}
-.health_plan{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin: 120px auto 0;
-}
-.plan{
-  width: 100%;
-  text-align: center;
-}
-.plan > img{
-  width: 250px;
-  margin: 0 auto;
-}
-.plan > h3{
-  font-size: 1.3rem;
-}
-.plan > p{
-  font-size: .9rem;
-  margin-bottom: 40px;
-}
-.plan > span{
-  width: 100%;
-  margin: 40px 0 0;
-  padding: 12px 130px;
-  border: 1px solid #094063;
-  border-radius: 5px;
-  font-size: .8rem;
-  font-weight: 600;
-}
-
-/***Styling the Testimony section***/
-.testimony_div{
-  width: 65%;
-  margin: 100px auto;
-  
-}
-.testimony_div > h1{
-  text-align: center;
-  color: #094063;
-}
-.testimony{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.testimony > p{
-  font-size: .8rem;
-  font-weight: normal;
-  color: black;
-  max-width: 500px;
-  margin: 50px;
-  text-align: center;
-}
-.testimony > i{
-  font-size: 2rem;
-  cursor: pointer;
-}
-.partner_img{
-  display: flex;
-  align-items: center;
-  overflow-x: hidden;
-}
-
-.partner_img > img{
-  width: 70px;
-  margin: 0 25px;
- 
-}
-
-/*****FOOTER******/
-.my_footer{
-  width: 100%;
-  background-color: #094063;
-  margin-top: 50px;
-  padding: 100px 0;
-}
-.footer_content{
-  display: flex;
-  justify-content: space-between;
-  width: 65%;
-  margin: 0 auto;
-  color: #ffffff;
-}
-.footer_content > img{
-  display: block;
-}
-.child{
-  width: 150px;
-}
-.child > ul{
-  list-style: none;
-  margin-top: 20px;
-}
-.child >ul >li{
-  font-size: .8rem;
-  line-height: 22px;
-  opacity: .7;
-  font-weight: normal;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/***Dark mode***/
-
-.dark_nav{
-  background-color: #00000081;
-  color: #ffffff;
-  filter: drop-shadow(0 1px 5px rgb(0, 0, 0));
-}
-.dark_body{
-  background-color: #09161e;
-  color: #ffffff;
+.product_rating{
+    color: rgba(231, 15, 55, 0.827);
+    font-weight: 700;
+    
 }
